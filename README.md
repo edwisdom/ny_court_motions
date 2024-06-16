@@ -1,3 +1,3 @@
 # Court Orders
 
-This scrapes criminal leave case data from from the NY Court of Appeals website.
+This scrapes case data about motions for criminal leave on the NY Court of Appeals website.

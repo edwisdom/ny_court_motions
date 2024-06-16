@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "court-orders"
+name = "ny-court-motions"
 version = "0.1.0"
-description = "This extracts data for NY Court of Appeals cases"
+description = "This extracts data for NY Court of Appeals motions for criminal leave."
 authors = ["edwisdom <22333941+edwisdom@users.noreply.github.com>"]
 readme = "README.md"
 
