@@ -343,8 +343,10 @@ def get_file_name(start_month: Month, end_month: Month) -> str:
 
 
 def main():
+    # Make directories to store data if they don't exist
     DATA_DIR = "data"
     RAW_DIR = "raw"
+    Path(DATA_DIR, RAW_DIR).mkdir(parents=True, exist_ok=True)
 
     # Get most recent cases
     start_month = Month(2, 2004)
@@ -355,7 +357,7 @@ def main():
         path=Path(DATA_DIR, RAW_DIR, get_file_name(start_month, end_month)),
     )
 
-    # Concatenate cases and save cleaned version
+    # Concatenate, dedupe, clean, and save all cases from raw data
     all_cases = concatenate_case_data(
         dirname=Path(DATA_DIR, RAW_DIR), filename=Path(DATA_DIR, "all_cases.csv")
     )
